@@ -48,7 +48,7 @@ public class DepartmentDAO {
 	/**
 	 * 登録SQL
 	 */
-	private static final String INSERT_SQL = "INSERT INTO department(nextval('seq_deptno'), ?)";
+	private static final String INSERT_SQL = "INSERT INTO department (dept_id, dept_name) VALUES (nextval('seq_deptno'), ?)";
 	/**
 	 * 更新SQL
 	 */

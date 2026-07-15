@@ -31,7 +31,7 @@
 									</tr>
 								</tbody>
 							</table>
-							<br> <input type="hidden" name="name" value="${newDeptCheckViewData.deptName}">
+							<br> <input type="hidden" name="deptName" value="${newDeptCheckViewData.deptName}">
 							<div style="display: inline-flex;">
 								<button type="submit" formaction="<%=request.getContextPath()%>/deptregistcheck"
 									class="btn btn-primary btn-lg m-3" name="regist">登録</button>
