@@ -56,11 +56,11 @@ public class DepartmentRegistInputServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		HttpSession session = req.getSession(false);
-		if(session==null) {
-			session=req.getSession(true);
+		if (session == null) {
+			session = req.getSession(true);
 			session.setAttribute("illegalOperationMsg", "不正な操作です");
 			resp.sendRedirect("menu");
-			return;			
+			return;
 		}
 		Department department = getInputParameterDepartment(req);
 
@@ -86,11 +86,12 @@ public class DepartmentRegistInputServlet extends HttpServlet {
 
 	/**
 	 * 入力パラメータを取得し新しい部門情報として返却
+	 * 
 	 * @param req HTTPリクエスト
 	 * @return 入力パラメータの部門情報
 	 */
 	private Department getInputParameterDepartment(HttpServletRequest req) {
-		String deptName = req.getParameter("name");
+		String deptName = req.getParameter("deptName");
 
 		Department department = new Department();
 		department.setDeptName(deptName);
@@ -122,4 +123,3 @@ public class DepartmentRegistInputServlet extends HttpServlet {
 		return errMsgs;
 	}
 }
-

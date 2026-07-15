@@ -24,12 +24,12 @@
 						<c:forEach var="msg" items="${errMsgs}">
 							<div class="alert alert-danger" role="alert">${msg}</div>
 						</c:forEach>
-						<form action="<%=request.getContextPath()%>/deptregistcheck" method="post">
+						<form action="<%=request.getContextPath()%>/deptregistinput" method="post">
 							<table class="table table-bordered table-striped">
 								<tbody>
 									<tr>
 										<td class="bg-dark text-light" width="60">部門名</td>
-										<td width="180"><input type="text" name="name"
+										<td width="180"><input type="text" name="deptName"
 												value="${newDeptInputViewData.deptName}" class="form-control"></td>
 									</tr>
 								</tbody>

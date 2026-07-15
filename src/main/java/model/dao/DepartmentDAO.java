@@ -44,7 +44,7 @@ public class DepartmentDAO {
 	/**
 	 * １件検索（条件：部門名）SQL
 	 */
-	private static final String SELECT_ONE_BY_NAME_SQL = "SELECT dept_id, dept_name FROM department WHERE dept_name = ";
+	private static final String SELECT_ONE_BY_NAME_SQL = "SELECT dept_id, dept_name FROM department WHERE dept_name = ?";
 	/**
 	 * 登録SQL
 	 */
@@ -112,7 +112,7 @@ public class DepartmentDAO {
 	public Department selectByDeptName(String deptName) throws SQLException {
 		Department department = null;
 		try (PreparedStatement preparedStatement = connection
-				.prepareStatement(SELECT_ONE_BY_NAME_SQL + "'" + deptName + "'");) {
+				.prepareStatement(SELECT_ONE_BY_NAME_SQL);) {
 			preparedStatement.setString(1, deptName);
 			ResultSet resultSet = preparedStatement.executeQuery();
 			if (resultSet.next()) {
