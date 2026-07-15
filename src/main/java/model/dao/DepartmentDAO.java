@@ -68,6 +68,7 @@ public class DepartmentDAO {
 	public List<Department> selectAll() throws SQLException {
 		// List<Department> deptList=null;
 		List<Department> deptList = new ArrayList<Department>();
+		// Departmentの型のインスタンスを入れられる。
 		try (PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_SQL);) {
 			ResultSet resultSet = preparedStatement.executeQuery();
 			while (resultSet.next()) {
