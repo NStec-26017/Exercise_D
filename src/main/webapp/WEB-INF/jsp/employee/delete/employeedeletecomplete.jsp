@@ -4,7 +4,7 @@
 		<html>
 
 		<head>
-			<title>部門削除(完了)</title>
+			<title>社員削除(完了)</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<!-- Bootstrap CSS -->
@@ -26,7 +26,19 @@
 							<tbody>
 								<tr>
 									<td class="bg-dark text-light" width="60">名前</td>
-									<td width="180">${delDeptCompleteViewData.deptName}</td>
+									<td width="180">${delEmpCompleteViewData.empName}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">部門名</td>
+									<td width="180">${delEmpCompleteViewData.department.deptName}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">電話番号</td>
+									<td width="180">${delEmpCompleteViewData.phone}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">メールアドレス</td>
+									<td width="180">${delEmpCompleteViewData.mailAddress}</td>
 								</tr>
 							</tbody>
 						</table>
