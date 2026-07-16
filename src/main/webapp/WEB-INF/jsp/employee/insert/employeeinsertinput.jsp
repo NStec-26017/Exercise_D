@@ -48,7 +48,7 @@
 															</option>
 														</c:if>
 													</c:if>
-													<c:if test="${empty newEmpInputViewData }">
+													<c:if test="${empty newEmpInputViewData}">
 														<option value="${dept.deptId}">
 															<c:out value="${dept.deptName}" />
 														</option>
