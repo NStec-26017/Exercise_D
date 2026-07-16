@@ -72,11 +72,12 @@ public class DepartmentRegistCheckServlet extends HttpServlet {
 
 	/**
 	 * 入力パラメータを取得し新しい部門情報として返却
+	 * 
 	 * @param req HTTPリクエスト
 	 * @return 入力パラメータの部門情報
 	 */
 	private Department getInputParameterDepartment(HttpServletRequest req) {
-		String deptName = req.getParameter("name");
+		String deptName = req.getParameter("deptName");
 
 		Department department = new Department();
 		department.setDeptName(deptName);

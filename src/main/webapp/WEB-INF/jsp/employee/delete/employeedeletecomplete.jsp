@@ -4,7 +4,7 @@
 		<html>
 
 		<head>
-			<title>部門登録(入力)</title>
+			<title>社員削除(完了)</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<!-- Bootstrap CSS -->
@@ -18,25 +18,30 @@
 			<div class="container">
 				<div class="card text-center">
 					<div class="card-body">
-						<h3 class="card-title">部門登録(入力)</h3>
+						<h3 class="card-title">社員削除(完了)</h3>
 						<br>
-						<h4 class="card-text">部門情報を入力して下さい。</h4>
-						<c:forEach var="msg" items="${errMsgs}">
-							<div class="alert alert-danger" role="alert">${msg}</div>
-						</c:forEach>
-						<form action="<%=request.getContextPath()%>/deptregistinput" method="post">
-							<table class="table table-bordered table-striped">
-								<tbody>
-									<tr>
-										<td class="bg-dark text-light" width="60">部門名</td>
-										<td width="180"><input type="text" name="name"
-												value="${newDeptInputViewData.deptName}" class="form-control"></td>
-									</tr>
-								</tbody>
-							</table>
-							<br>
-							<button type="submit" class="btn btn-primary btn-lg">確認</button>
-						</form>
+						<h4 class="card-text">以下の内容を削除しました。</h4>
+						<br>
+						<table class="table table-bordered table-striped">
+							<tbody>
+								<tr>
+									<td class="bg-dark text-light" width="60">名前</td>
+									<td width="180">${delEmpCompleteViewData.empName}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">部門名</td>
+									<td width="180">${delEmpCompleteViewData.department.deptName}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">電話番号</td>
+									<td width="180">${delEmpCompleteViewData.phone}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">メールアドレス</td>
+									<td width="180">${delEmpCompleteViewData.mailAddress}</td>
+								</tr>
+							</tbody>
+						</table>
 						<br>
 						<ul class="nav justify-content-center">
 							<li><a href="<%=request.getContextPath()%>/menu" class="btn btn-info btn-lg">メニュー</a></li>

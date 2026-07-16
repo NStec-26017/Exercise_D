@@ -24,7 +24,7 @@ import model.service.DeleteEmployeeService;
 public class EmployeeDeleteSelectButtonServlet  extends HttpServlet {
 
 	/**
-	 * 社員一覧画面の削除ボタンから実行され、入力内容をセッションに保存して確認画面にリダイレクト<br>
+	 * 社員一覧画面で山田太郎の行にある「削除」ボタンをクリックして実行され、入力内容をセッションに保存して確認画面にリダイレクト<br>
 	 * 入力内容確認のDB処理に失敗した場合はエラー画面にリダイレクト
 	 */
 	@Override

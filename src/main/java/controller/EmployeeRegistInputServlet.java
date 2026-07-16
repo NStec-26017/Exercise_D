@@ -42,6 +42,7 @@ public class EmployeeRegistInputServlet extends HttpServlet {
 			req.setAttribute("errMsgs", errMsgs);
 
 		}
+
 		Employee employee = (Employee) session.getAttribute("newEmpInput");
 		if (employee != null) {
 			session.removeAttribute("newEmpInput");
@@ -110,6 +111,7 @@ public class EmployeeRegistInputServlet extends HttpServlet {
 		Employee employee = new Employee();
 		employee.setEmpName(name);
 		employee.setDeptId(deptId);
+		employee.setPhone(phone);
 		employee.setMailAddress(mailAddress);
 
 		return employee;
