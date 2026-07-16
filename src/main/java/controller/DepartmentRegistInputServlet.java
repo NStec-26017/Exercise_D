@@ -113,7 +113,7 @@ public class DepartmentRegistInputServlet extends HttpServlet {
 
 		String deptName = department.getDeptName();
 		if (deptName == "") {
-			errMsgs.add("名前を入力して下さい");
+			errMsgs.add("部門名を入力して下さい");
 		} else if (deptName.length() > 100) {
 			errMsgs.add("部門名は100文字以内で入力して下さい");
 		} else if (new InsertDepartmentService().isDuplicateDeptName(deptName)) {
