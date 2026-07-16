@@ -25,7 +25,11 @@
 						<table class="table table-bordered table-striped">
 							<tbody>
 								<tr>
-									<td class="bg-dark text-light" width="60">所属部門</td>
+									<td class="bg-dark text-light" width="60">名前</td>
+									<td width="180">${delEmpCompleteViewData.empName}</td>
+								</tr>
+								<tr>
+									<td class="bg-dark text-light" width="60">部門名</td>
 									<td width="180">${delEmpCompleteViewData.department.deptName}</td>
 								</tr>
 								<tr>
@@ -33,12 +37,8 @@
 									<td width="180">${delEmpCompleteViewData.phone}</td>
 								</tr>
 								<tr>
-									<td class="bg-dark text-light" width="60">E-Mailアドレス</td>
+									<td class="bg-dark text-light" width="60">メールアドレス</td>
 									<td width="180">${delEmpCompleteViewData.mailAddress}</td>
-								</tr>
-								<tr>
-									<td class="bg-dark text-light" width="60">名前</td>
-									<td width="180">${delEmpCompleteViewData.empName}</td>
 								</tr>
 							</tbody>
 						</table>
