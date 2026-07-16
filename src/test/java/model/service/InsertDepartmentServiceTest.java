@@ -92,6 +92,7 @@ public class InsertDepartmentServiceTest {
 
         assertDoesNotThrow(() -> target.createDepartment(TestUtil.dept104));
 
+        // 確実に登録されたかDBと接続して確認すべきところ、メソッドが登録された主キーを返さないため、エラーが出ないことのみ確認しています。
     }
 
     @Test
