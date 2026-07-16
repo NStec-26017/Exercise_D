@@ -44,7 +44,7 @@ public class DepartmentRegistInputServlet extends HttpServlet {
 			session.removeAttribute("newDeptInput");
 		}
 
-		session.setAttribute("newDeptInputViewData", department);
+		req.setAttribute("newDeptInputViewData", department);
 		req.getRequestDispatcher("WEB-INF/jsp/department/insert/departmentinsertinput.jsp").forward(req, resp);
 	}
 

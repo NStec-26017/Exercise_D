@@ -29,7 +29,7 @@
 								<tbody>
 									<tr>
 										<td class="bg-dark text-light" width="60">部門名</td>
-										<td width="180"><input type="text" name="name"
+										<td width="180"><input type="text" name="deptName"
 												value="${newDeptInputViewData.deptName}" class="form-control"></td>
 									</tr>
 								</tbody>
