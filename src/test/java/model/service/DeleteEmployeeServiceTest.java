@@ -45,14 +45,14 @@ public class DeleteEmployeeServiceTest {
     }
 
     @Test
-    @DisplayName("引数が存在し、DB接続ができ、SQL文が間違っている:例外処理（取得失敗）")
+    @DisplayName("引数が存在し、DB接続ができるが、DBにデータがない:例外処理（取得失敗）")
     public void testDeleteEmpService_getInfo02() throws Exception {
         TestUtil.clearDB();
         assertThrows(ServiceException.class, () -> target.readEmployeeByEmpId(trueEmpId));
     }
 
     @Test
-    @DisplayName("引数が存在せず、DB接続ができ、SQL文が正しい")
+    @DisplayName("引数が存在せず、DB接続ができ、DBにデータがある:例外処理（取得件数が0件）")
     public void testDeleteEmpService_getInfo03() throws Exception {
 
         TestUtil.setDS101ToDB();
@@ -62,7 +62,7 @@ public class DeleteEmployeeServiceTest {
     }
 
     @Test
-    @DisplayName("引数が存在し、DB接続ができ、SQL文が正しい")
+    @DisplayName("引数が存在し、DB接続ができ、DBにデータがある")
     public void testDeleteEmpService_getInfo04() throws Exception {
 
         TestUtil.setDS101ToDB();
@@ -73,6 +73,7 @@ public class DeleteEmployeeServiceTest {
     }
 
     @Test
+    @DisplayName("引数が正しく、DB接続ができていない:例外処理（DB処理エラー）")
     public void testDeleteEmpService_deleteInfo05() throws Exception {
 
         TestUtil.changeDBSetting();
@@ -84,6 +85,7 @@ public class DeleteEmployeeServiceTest {
     }
 
     @Test
+    @DisplayName("引数が存在し、DB接続ができるが、DBにデータがない:例外処理（取得失敗）")
     public void testDeleteEmpService_deleteInfo06() throws Exception {
 
         TestUtil.clearDB();
@@ -91,6 +93,7 @@ public class DeleteEmployeeServiceTest {
     }
 
     @Test
+    @DisplayName("引数が存在せず、DB接続ができ、DBにデータがある:例外処理（取得件数が0件）")
     public void testDeleteEmpService_deleteInfo07() throws Exception {
 
         TestUtil.setDS101ToDB();
@@ -99,6 +102,7 @@ public class DeleteEmployeeServiceTest {
     }
 
     @Test
+    @DisplayName("引数が存在し、DB接続ができ、DBにデータがある")
     public void testDeleteEmpService_deleteInfo08() throws Exception {
 
         TestUtil.setDS101ToDB();
