@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.List;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,17 @@ import util.TestUtil;
 public class GetDepartmentListServiceTest {
 
     GetDepartmentListService target;
+
+    /**
+     * 後処理
+     * 
+     * @throws Exception
+     */
+    @AfterAll
+    public static void tearDownAfterClass() throws Exception {
+        TestUtil.initDB();
+        TestUtil.setDS101ToDB();
+    }
 
     @BeforeEach
     public void setUp() throws Exception {
